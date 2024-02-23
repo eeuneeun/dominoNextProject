@@ -1,5 +1,13 @@
 export type User = {
-  id: number;
-  nme: string;
-  emil: string;
+  id: string;
+  email: string;
+  name: string;
+  username: string;
+};
+
+export type Cat = {
+  id: string;
+  url: string;
+  width: number;
+  height: number;
 };
