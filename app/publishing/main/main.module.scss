@@ -1,0 +1,18 @@
+$primary-color: #64ff00;
+
+:export {
+  primaryColor: $primary-color;
+}
+
+.section {
+  width: 100%;
+  color: red;
+
+  .list {
+    padding: 20px;
+
+    li {
+      float: left;
+    }
+  }
+}

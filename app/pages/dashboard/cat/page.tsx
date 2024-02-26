@@ -102,7 +102,7 @@ export default function Page() {
                   key={cat.id}
                   style={{ border: '1px solid #ccc', textAlign: 'center' }}
                 >
-                  <img
+                  <Image
                     src={cat.url}
                     alt={cat.id}
                     width={cat.width}
