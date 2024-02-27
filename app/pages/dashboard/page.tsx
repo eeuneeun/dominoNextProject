@@ -7,10 +7,10 @@ export default function Page() {
     <>
       <ul>
         <li>
-          <Link href="/dashboard/user">유저</Link>
+          <Link href="/pages/dashboard/user">유저</Link>
         </li>
         <li>
-          <Link href="/dashboard/cat">고양이</Link>
+          <Link href="/pages/dashboard/cat">고양이</Link>
         </li>
       </ul>
     </>

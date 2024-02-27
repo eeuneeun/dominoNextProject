@@ -24,7 +24,7 @@ export default function Page() {
             </strong>
           </p>
           <Link
-            href="/dashboard"
+            href="/pages/dashboard"
             className="login-btn flex items-center gap-5 self-start rounded-lg px-6 py-3 text-sm font-medium text-white transition-colors md:text-base"
           >
             <span>LET&apos;S GO</span> <ArrowRightIcon className="w-5 md:w-6" />

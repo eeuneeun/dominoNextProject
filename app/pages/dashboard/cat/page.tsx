@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Cat } from '../../types/User.tsx';
+import { Cat } from '../../../types/Common.tsx';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 
