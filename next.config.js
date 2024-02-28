@@ -10,6 +10,12 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'cdn.dominos.co.kr',
+        port: '',
+        pathname: '/renewal2018/w/event/230802_deliciouslyA/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'robohash.org',
         port: '',
         pathname: '/*',

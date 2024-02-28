@@ -31,9 +31,11 @@ export default function Page() {
           </Link>
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-          <img
-            src="http://cdn.dominos.co.kr/renewal2018/w/event/230802_deliciouslyA/img_1.jpg"
-            alt="아이유"
+          <Image
+            src={`https://cdn.dominos.co.kr/renewal2018/w/event/230802_deliciouslyA/img_1.jpg`}
+            alt={`아이유`}
+            width={500}
+            height={600}
           />
         </div>
       </div>
