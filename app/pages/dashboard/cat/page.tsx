@@ -5,11 +5,18 @@ import { Cat } from '../../../types/Common.tsx';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 
-// # 함수 : 고양이 데이터 1개 가져오기
+// # OPEN API : 고양이 데이터 1개 가져오기
 async function getCat() {
   return (await fetch(
     'https://api.thecatapi.com/v1/images/search?api_key="live_htTyfBboDIShSRUDlIyiLWqGLk81k0odsNZZQKXXHPjPKTfOGBsdGmMn5LIc9mtg"',
   ).then((res) => res.json())) as Cat[];
+}
+
+// NEST API : 고양이 야옹
+async function helloCat() {
+  return await fetch('http://localhost:3000/cats').then((res) =>
+    console.log(res),
+  );
 }
 
 export default function Page() {
@@ -32,6 +39,7 @@ export default function Page() {
     refetchInterval: 10000, // polling 기준 시간
   });
 
+  helloCat();
   // const {
   //   data,
   //   error,
