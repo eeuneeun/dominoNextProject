@@ -5,7 +5,9 @@
     "dev": "next dev -p 3030",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest --watch --passWithNoTests",
+    "test:ci": "jest --ci --passWithNoTests"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
