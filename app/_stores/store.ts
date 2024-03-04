@@ -1,12 +1,13 @@
+// ★ COMMON
+
 import type { Action, ThunkAction } from "@reduxjs/toolkit";
 import { combineSlices, configureStore } from "@reduxjs/toolkit";
 import { counterSlice } from "./counter/counterSlice";
 import { quotesApiSlice } from "./quotes/quotesApiSlice";
 
-// `combineSlices` automatically combines the reducers using
-// their `reducerPath`s, therefore we no longer need to call `combineReducers`.
+// rootReducer : 여러 Slice 조각들을 합쳐서 담아줌
 const rootReducer = combineSlices(counterSlice, quotesApiSlice);
-// Infer the `RootState` type from the root reducer
+// RootState :  root reducer 로 부터 유래함
 export type RootState = ReturnType<typeof rootReducer>;
 
 // `makeStore` encapsulates the store configuration to allow
