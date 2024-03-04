@@ -1,5 +1,1 @@
-## Next.js App Router Course - Starter
-
-This is the starter template for the Next.js App Router Course. It contains the starting code for the dashboard application.
-
-For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
+# 도미노 피자 차세대 프로젝트 기본 세팅 및 구조 설계
