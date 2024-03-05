@@ -4,7 +4,7 @@ import { StoreProvider } from "./_stores/StoreProvider";
 import Header from "./_components/common/Header";
 import Gnb from "./_components/common/Gnb";
 
-import "./_styles/globals.css";
+import global from "./_styles/global.module.scss";
 import styles from "./_styles/layout.module.css";
 
 interface Props {
@@ -19,7 +19,12 @@ export default function RootLayout({ children }: Props) {
           <Header />
           <Gnb />
           <section className={styles.container}>
-            <main className={styles.main}>{children}</main>
+            <main
+              className={styles.main}
+              style={{ color: global.primaryColor }}
+            >
+              {children}
+            </main>
 
             <footer className={styles.footer}>
               <span>Learn </span>
@@ -37,6 +42,7 @@ export default function RootLayout({ children }: Props) {
                 href="https://redux.js.org"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ color: global.primaryColor }}
               >
                 Redux
               </a>

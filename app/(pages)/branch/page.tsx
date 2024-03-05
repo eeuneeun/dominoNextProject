@@ -1,8 +1,8 @@
-// # 타 검색엔진을 통하여 진입되는 이벤트형 랜딩 페이지
-export default function Landing() {
-  return (
-    <>
-      <h2>랜딩페이지</h2>
-    </>
-  );
+// 지도가 들어가는 점포 정보 검색 페이지
+import * as React from "react";
+
+export interface BranchProps {}
+
+export default function Branch(props: BranchProps) {
+  return <h2>점포 검색</h2>;
 }
