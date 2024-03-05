@@ -1,11 +1,8 @@
-import { Quotes } from "../../_components/quotes/Quotes";
-
-export default function QuotesPage() {
+// # E-쿠폰 페이지
+export default function Landing() {
   return (
     <>
-      <h1>Quotes page</h1>
-      <p>This page is intended to showcase RTK Query.</p>
-      <Quotes />
+      <h2>E-쿠폰 페이지</h2>
     </>
   );
 }

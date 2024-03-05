@@ -1,7 +1,8 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { StoreProvider } from "./_stores/StoreProvider";
-import { Nav } from "./_components/common/Nav";
+import Header from "./_components/common/Header";
+import Gnb from "./_components/common/Gnb";
 
 import "./_styles/globals.css";
 import styles from "./_styles/layout.module.css";
@@ -15,11 +16,9 @@ export default function RootLayout({ children }: Props) {
     <StoreProvider>
       <html lang="ko">
         <body>
+          <Header />
+          <Gnb />
           <section className={styles.container}>
-            <Nav />
-
-            <header className={styles.header}>로고</header>
-
             <main className={styles.main}>{children}</main>
 
             <footer className={styles.footer}>

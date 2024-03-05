@@ -1,3 +1,9 @@
+import { ReactNode } from "react";
+
+export interface Props {
+  readonly children: ReactNode;
+}
+
 export type User = {
   id: string;
   email: string;
