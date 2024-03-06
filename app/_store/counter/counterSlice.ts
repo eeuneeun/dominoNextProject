@@ -1,7 +1,7 @@
 // # 예제 코드
 
-import { createAppSlice } from "@/app/_stores/createAppSlice";
-import type { AppThunk } from "@/app/_stores/store";
+import { createAppSlice } from "@/app/_store/createAppSlice";
+import type { AppThunk } from "@/app/_store/store";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { fetchCount } from "./counterAPI";
 

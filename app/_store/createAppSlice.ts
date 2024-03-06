@@ -2,7 +2,7 @@
 
 import { asyncThunkCreator, buildCreateSlice } from "@reduxjs/toolkit";
 
-// `buildCreateSlice` allows us to create a slice with async thunks.
+// `buildCreateSlice` : async thunks 적용을 위함
 export const createAppSlice = buildCreateSlice({
   creators: { asyncThunk: asyncThunkCreator },
 });

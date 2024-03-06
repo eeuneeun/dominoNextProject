@@ -4,6 +4,7 @@ import type { Action, ThunkAction } from "@reduxjs/toolkit";
 import { combineSlices, configureStore } from "@reduxjs/toolkit";
 import { counterSlice } from "./counter/counterSlice";
 import { quotesApiSlice } from "./quotes/quotesApiSlice";
+import logger from "redux-logger";
 
 // rootReducer : 여러 Slice 조각들을 합쳐서 담아줌
 const rootReducer = combineSlices(counterSlice, quotesApiSlice);
@@ -19,9 +20,8 @@ export const makeStore = () => {
     reducer: rootReducer,
     // Adding the api middleware enables caching, invalidation, polling,
     // and other useful features of `rtk-query`.
-    middleware: (getDefaultMiddleware) => {
-      return getDefaultMiddleware().concat(quotesApiSlice.middleware);
-    },
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(quotesApiSlice.middleware, logger),
   });
 };
 
