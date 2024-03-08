@@ -9,6 +9,10 @@ const nextConfig = {
       fullUrl: true,
     },
   },
+  i18n: {
+    locales: ["en-US", "en", "ko"],
+    defaultLocale: "ko",
+  },
   sassOptions: {
     includePaths: [path.join(__dirname, "_styles")],
   },
