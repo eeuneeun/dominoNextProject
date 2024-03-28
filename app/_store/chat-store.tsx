@@ -39,12 +39,7 @@ export const useChatRoomStore = create<IChatRoom>()(
   )
 );
 
-// 비지니스 로직 쪽으로 빠질 헬퍼 함수 
-function findRoom(room : roomInfo, findId : roomInfo["id"]){
-  if(room.id === findId){
-    return true;
-  }
-}
+
 
 // 채팅룸 리스트 관련
 export const useChatRoomListStore = create<IChatRoomList>()(
@@ -69,3 +64,10 @@ export const useChatRoomListStore = create<IChatRoomList>()(
     }
   )
 );
+
+// 비지니스 로직 쪽으로 빠질 헬퍼 함수 
+function findRoom(room : roomInfo, findId : roomInfo["id"]){
+  if(room.id === findId){
+    return true;
+  }
+}

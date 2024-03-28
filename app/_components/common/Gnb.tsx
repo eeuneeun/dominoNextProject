@@ -17,7 +17,7 @@ export default function Gnb(): React.JSX.Element {
   return (
     <nav className="gnb flex-between">
       <ul className="menu-list flex-start">
-        <li><Link href="/menu">채팅</Link></li>
+        <li><Link href="/chat">채팅</Link></li>
         <li><Link href="/report">보고서 (오픈 예정)</Link></li>
         <li><Link href="/summary">요약 (오픈 예정)</Link></li>
       </ul>
