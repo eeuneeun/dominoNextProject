@@ -2,36 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-import styles from "../../_styles/layout.module.css";
-
-export const Nav = () => {
+export default function Snb(): React.JSX.Element {
   const pathname = usePathname();
 
   return (
-    <nav className={styles.nav}>
-      <Link
-        className={`${styles.link} ${pathname === "/" ? styles.active : ""}`}
-        href="/"
-      >
-        Home
-      </Link>
-      <Link
-        className={`${styles.link} ${
-          pathname === "/verify" ? styles.active : ""
-        }`}
-        href="/verify"
-      >
-        Verify
-      </Link>
-      <Link
-        className={`${styles.link} ${
-          pathname === "/quotes" ? styles.active : ""
-        }`}
-        href="/quotes"
-      >
-        Quotes
-      </Link>
+    <nav className="snb">
+      <h3>채팅 목록</h3>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
     </nav>
   );
 };

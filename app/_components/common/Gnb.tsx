@@ -1,21 +1,37 @@
 "use client";
 
-import React, { FunctionComponent } from "react";
+import React, { ReactEventHandler, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import  from "../../_/layout.module.css";
+import { UserInfo } from "../atomic/template/UserInfo";
 
 export default function Gnb(): React.JSX.Element {
   const pathname = usePathname();
+  const [isLogin, setIsLogin]= useState(false)
+
+  function signin(event:React.MouseEvent<HTMLElement>){
+    event.preventDefault()
+    setIsLogin(true)
+  }
 
   return (
-    <nav>
-      <Link href="/menu">메뉴</Link>
-      <Link href="/e-coupon">e-쿠폰</Link>
-      <Link href="/voucher">상품권 선물</Link>
-      <Link href="/event">이벤트·제휴</Link>
-      <Link href="/branch">매장검색</Link>
-      <Link href="/chainstore">가맹점 모집</Link>
+    <nav className="gnb flex-between">
+      <ul className="menu-list flex-start">
+        <li><Link href="/menu">채팅</Link></li>
+        <li><Link href="/report">보고서 (오픈 예정)</Link></li>
+        <li><Link href="/summary">요약 (오픈 예정)</Link></li>
+      </ul>
+      <ul className="user-info">
+        { isLogin ? (
+          <li>
+            <UserInfo />
+          </li>
+          ):(
+          <li onClick={signin}><Link href="/signin">로그인</Link></li>
+        )
+        }
+        
+      </ul>
     </nav>
   );
 }

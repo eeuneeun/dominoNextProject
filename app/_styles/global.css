@@ -1,0 +1,126 @@
+.wrapper {
+    width: 100%;
+  }
+
+
+/* HEADER */
+.header{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #eee;
+}
+.header .logo{
+    width: 150px;
+    height: 50px;
+    background: #000;
+    color: #fff;
+}
+.header .logo a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+}
+
+/* GNB */
+.gnb{
+    width: calc(100% - 150px);
+}
+
+.gnb .menu-list li{
+    width: 150px;
+    height: 100%;
+}
+.gnb .menu-list li a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.gnb .user-info,
+.gnb .user-info li{
+    width: 100px;
+    height: 100%;
+}    
+
+
+.gnb .user-info .auth-info{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.gnb .user-info .auth-info .user-profile{
+    width: 50px;
+    height: 50px;
+    background: #3a09ff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gnb .user-info .auth-info .panel-wrap{
+    position: absolute;
+    bottom: -110px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #a8a8a8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.gnb .user-info .auth-info .panel-wrap ul,
+.gnb .user-info .auth-info .panel-wrap ul * {
+    width: 100%;
+    height: 100%;
+}
+.gnb .user-info .auth-info .panel-wrap ul li {
+    height: 50%;
+    color: #000;
+    cursor: pointer;
+}
+.gnb .user-info .auth-info .panel-wrap ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.gnb .user-info .auth-info .panel-wrap ul li a:hover{
+    background: #eee;
+}
+
+
+/* SNB */
+.snb{
+    width: 150px;
+    height: calc(100% - 50px);
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+/* CONTENTS */
+.contents-wrap{
+    width: calc(100% - 150px);
+    height: calc(100% - 50px);
+    position:absolute;
+    top: 50px;
+    left: 150px;
+    border-left: 1px solid #eee;
+}

@@ -11,7 +11,8 @@
 }
 
 .logo {
-  height: 40vmin;
+  width: 100px;
+  height:50px;
   pointer-events: none;
 }
 

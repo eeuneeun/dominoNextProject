@@ -2,19 +2,16 @@
 
 import React, { FunctionComponent } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import styles from "../../_styles/layout.module.css";
+import Gnb from "./Gnb";
 
-const Header: FunctionComponent = () => {
-  const pathname = usePathname();
+export default function Header(): React.JSX.Element {
 
   return (
-    <div>
-      <h1>
-        <Link href="/">도미노 로고</Link>
+    <header className="header flex-start">
+      <h1 className="logo">
+        <Link href="/">BI 로고</Link>
       </h1>
-    </div>
+      <Gnb />
+    </header>
   );
 };
-
-export default Header;
