@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { StoreProvider } from "./_store/StoreProvider";
 import Header from "./_components/common/Header";
 import Gnb from "./_components/common/Gnb";
 
@@ -13,7 +12,6 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <StoreProvider>
       <html lang="ko">
         <body>
           <Header />
@@ -28,6 +26,5 @@ export default function RootLayout({ children }: Props) {
           </section>
         </body>
       </html>
-    </StoreProvider>
   );
 }

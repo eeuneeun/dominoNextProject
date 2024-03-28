@@ -6,5 +6,5 @@ export default function IndexPage() {
 }
 
 export const metadata: Metadata = {
-  title: "Redux Toolkit",
+  title: "NEXTJS 14 + TDD + CDD + ZUSTAND PROJECT :)",
 };
