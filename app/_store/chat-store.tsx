@@ -58,6 +58,7 @@ export const useChatRoomListStore = create<IChatRoomList>()(
       modifyRoom:  (newList) => {
         set({ list : newList});
       },
+      
     }),
     {
       name: "chatRoomInfo-store", // default to LocalStorage
@@ -65,9 +66,4 @@ export const useChatRoomListStore = create<IChatRoomList>()(
   )
 );
 
-// 비지니스 로직 쪽으로 빠질 헬퍼 함수 
-function findRoom(room : roomInfo, findId : roomInfo["id"]){
-  if(room.id === findId){
-    return true;
-  }
-}
+

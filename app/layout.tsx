@@ -16,8 +16,8 @@ interface Props {
 export default function RootLayout({ children }: Props) {
   return (
       <html lang="ko">
-        <Hydration />
         <body>
+          <Hydration />
           <Header />
           <Snb />
           <section className="contents-wrap">
