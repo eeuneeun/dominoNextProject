@@ -3,6 +3,7 @@
 import { useChatRoomListStore } from "@/app/_store/chat-store";
 import TurnedInIcon from '@mui/icons-material/TurnedIn';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
+import AddBoxIcon from '@mui/icons-material/AddBox';
 import { useState } from "react";
 
 export default function Snb(): React.JSX.Element {
@@ -18,15 +19,21 @@ export default function Snb(): React.JSX.Element {
 
   // 변경전 배열 가공
   function makeModifyRoomCondition(idx: number ){
+     
     roomList[idx].isPin = !(roomList[idx].isPin)
     console.log(roomList)
     modifyRoom(roomList);
   }
 
-
+  function addNewChatRoom(){
+    console.log("새 채팅방 추가");
+  }
   return (
     <nav className="snb">
       <h3>채팅 목록</h3>
+      <button className='add-chatroom' onClick={addNewChatRoom}>
+          <AddBoxIcon />
+        </button>
       <ul>
         { roomList &&
           roomList.map((item, idx)=>(<><li key={"key"+item.id}>
