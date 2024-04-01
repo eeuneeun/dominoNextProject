@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { devtools, persist } from "zustand/middleware";
 
 type roomInfo ={
   id: string;
@@ -21,7 +21,7 @@ interface IChatRoomList {
 }
   
 // 채팅룸 정보 관련
-export const useChatRoomStore = create<IChatRoom>()(
+export const chatRoomSlice = create<IChatRoom>()(
   persist(
     (set) => ({
       roomInfo : {
@@ -42,7 +42,8 @@ export const useChatRoomStore = create<IChatRoom>()(
 
 
 // 채팅룸 리스트 관련
-export const useChatRoomListStore = create<IChatRoomList>()(
+export const chatRoomListSlice = create<IChatRoomList>()(
+  devtools(
   persist(
     (set) => ({
       list : [{
@@ -64,6 +65,5 @@ export const useChatRoomListStore = create<IChatRoomList>()(
       name: "chatRoomInfo-store", // default to LocalStorage
     }
   )
-);
-
+));
 

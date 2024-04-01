@@ -9,6 +9,8 @@ import global from "./_styles/global.module.scss";
 import styles from "./_styles/layout.module.css";
 import Hydration from "./_store/hydration";
 
+import RQProviders from "./_queries/provider";
+
 interface Props {
   readonly children: ReactNode;
 }
@@ -17,6 +19,7 @@ export default function RootLayout({ children }: Props) {
   return (
       <html lang="ko">
         <body>
+          <RQProviders />
           <Hydration />
           <Header />
           <Snb />

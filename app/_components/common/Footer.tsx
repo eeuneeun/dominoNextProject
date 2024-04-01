@@ -9,29 +9,6 @@ export const Nav = () => {
   const pathname = usePathname();
 
   return (
-    <nav className={styles.nav}>
-      <Link
-        className={`${styles.link} ${pathname === "/" ? styles.active : ""}`}
-        href="/"
-      >
-        Home
-      </Link>
-      <Link
-        className={`${styles.link} ${
-          pathname === "/verify" ? styles.active : ""
-        }`}
-        href="/verify"
-      >
-        Verify
-      </Link>
-      <Link
-        className={`${styles.link} ${
-          pathname === "/quotes" ? styles.active : ""
-        }`}
-        href="/quotes"
-      >
-        Quotes
-      </Link>
-    </nav>
+    <footer> Floatyn는 실수를 할 수 있습니다. 중요한 정보는 확인해주세요.</footer>
   );
 };

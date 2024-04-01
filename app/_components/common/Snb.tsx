@@ -1,6 +1,6 @@
 "use client";
 
-import { useChatRoomListStore } from "@/app/_store/chat-store";
+import { chatRoomListSlice } from "@/app/_store/chatSlice";
 import TurnedInIcon from '@mui/icons-material/TurnedIn';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
 import AddBoxIcon from '@mui/icons-material/AddBox';
@@ -12,10 +12,10 @@ export default function Snb(): React.JSX.Element {
 
   // [0329 원은재]
   // zustand store 로부터 필요 state & dispatch 함수를 할당
-  const roomList = useChatRoomListStore((state) => state.list);
+  const roomList = chatRoomListSlice((state) => state.list);
   // const modifyRoom = useChatRoomListStore((state) => state.modifyRoom)
 
-   const {addRoom, modifyRoom} = useChatRoomListStore();
+   const {addRoom, modifyRoom} = chatRoomListSlice();
 
   // 변경전 배열 가공
   function makeModifyRoomCondition(idx: number ){
