@@ -1,6 +1,6 @@
 "use client";
 
-import { chatRoomListSlice } from "@/app/_store/chatSlice";
+import { useChatRoomListStore } from "@/app/_store/chatStore";
 import TurnedInIcon from '@mui/icons-material/TurnedIn';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
 import AddBoxIcon from '@mui/icons-material/AddBox';
@@ -12,17 +12,16 @@ export default function Snb(): React.JSX.Element {
 
   // [0329 원은재]
   // zustand store 로부터 필요 state & dispatch 함수를 할당
-  const roomList = chatRoomListSlice((state) => state.list);
   // const modifyRoom = useChatRoomListStore((state) => state.modifyRoom)
 
-   const {addRoom, modifyRoom} = chatRoomListSlice();
+   const {chatRoomList, addRoom, modifyRoomList} = useChatRoomListStore();
 
   // 변경전 배열 가공
   function makeModifyRoomCondition(idx: number ){
      
-    roomList[idx].isPin = !(roomList[idx].isPin)
-    console.log(roomList)
-    modifyRoom(roomList);
+    chatRoomList[idx].isPin = !(chatRoomList[idx].isPin)
+    console.log(chatRoomList)
+    modifyRoomList(chatRoomList);
   }
 
   function addNewChatRoom(){
@@ -35,17 +34,17 @@ export default function Snb(): React.JSX.Element {
           <AddBoxIcon />
         </button>
       <ul>
-        { roomList &&
-          roomList.map((item, idx)=>(<><li key={"key"+item.id}>
+        { chatRoomList &&
+          chatRoomList.map((item, idx)=>(<><li key={"key"+item.id}>
               <ul className="chat-room-panel">
-                <li>{item.name}</li>
+                <li>{item.title}</li>
                 <li className={`pin ${item.isPin ? "active" : ""}`}>
                   {/* 고정 여부 */}
                   <button onClick={()=>makeModifyRoomCondition(idx)}>
                     {item.isPin ? <TurnedInIcon /> : <TurnedInNotIcon />}
                   </button>
                 </li>
-                <li>{item.lastTime}</li>
+                <li>{item.updated_at}</li>
               </ul>
           </li></>))}
       </ul>

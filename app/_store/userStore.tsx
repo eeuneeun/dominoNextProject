@@ -13,7 +13,7 @@ export interface IUserSlice{
 }
 
 
-// 채팅룸 리스트 관련
+// 유저 정보 관련
 export const userSlice = create<IUserSlice>()(
   devtools(
     persist(
